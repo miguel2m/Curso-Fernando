@@ -1,0 +1,96 @@
+
+<div class="container">
+
+  <h1>Pipes</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Variable</th>
+      <th scope="col">Pipe</th>
+      <th scope="col">Producto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{nombre}}</td>
+      <td> uppercase</td>
+      <td>{{nombre | uppercase}}</td>
+    </tr>
+
+    <tr>
+      <td>{{nombre}}</td>
+      <td> Lowercase</td>
+      <td>{{nombre | lowercase}}</td>
+    </tr>
+
+    <tr>
+      <td>{{nombre}}</td>
+      <td> slice</td>
+      <td>{{nombre | slice:3}}</td>
+    </tr>
+
+    <tr>
+      <td>{{nombre}}</td>
+      <td> slice:0:3</td>
+      <td>{{nombre | slice:0:3}}</td>
+    </tr>
+    <tr>
+      <td>{{arreglo}}</td>
+      <td> slice:1:5</td>
+      <td>{{arreglo | slice:1:5}}</td>
+    </tr>
+    <tr>
+      <td>{{PI}}</td>
+      <td> number</td>
+      <td>{{PI| number:'1.0-5'}}</td>
+    </tr>
+
+    <tr>
+      <td>{{valorDePromesa}}</td>
+      <td> async</td>
+      <td>{{valorDePromesa | async }}</td>
+    </tr>
+
+    <tr>
+      <td>{{fecha}}</td>
+      <td> date</td>
+      <td>{{fecha | date }}</td>
+    </tr>
+
+    <tr>
+      <td>{{fecha}}</td>
+      <td> date: medium</td>
+      <td>{{fecha | date:'medium' }}</td>
+    </tr>
+    <tr>
+      <td>{{fecha}}</td>
+      <td> date: personalizado</td>
+      <td>{{fecha | date:'MMMM - dd' }}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<!--
+<h4>Slice</h4>
+<ul>
+  <li *ngFor= "let item of arreglo | slice:5:20">
+    {{item}}
+  </li>
+</ul>
+-->
+<!--
+<h4> JSON</h4>
+<pre>
+  {{heroe | json}}
+</pre>
+-->
+  <div class="md-col-12">
+
+
+    <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
